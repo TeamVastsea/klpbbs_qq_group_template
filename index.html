@@ -4,16 +4,17 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>论坛官方群聊</title>
+	<title>论坛群聊信息</title>
 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
 	<style>
-		body, html {
+		body,
+		html {
 			height: 100%;
+			background-color: #f0f0f3;
 		}
+
 		.container {
 			display: flex;
 			flex-direction: column;
@@ -21,15 +22,26 @@
 			align-items: center;
 			min-height: 100vh;
 		}
+
 		.table-container {
 			width: 100%;
 			max-width: 600px;
+			background: #ffffff;
+			border-radius: 15px;
+			box-shadow: 3px 3px 6px #cbced1, -3px -3px 6px #ffffff;
+			padding: 20px;
+			margin-top: 40px;
+			margin-bottom: 40px;
 		}
+
 		h3 {
 			text-align: center;
 			width: 100%;
+			margin-bottom: 20px;
 		}
-		.table thead th, .table tbody td {
+
+		.table thead th,
+		.table tbody td {
 			text-align: center;
 			vertical-align: middle;
 		}
@@ -39,11 +51,7 @@
 <body>
 	<div class="container">
 		<div class="table-container mb-5" id="group-list">
-			<h3 style="text-align: left;">
-				<a href="javascript:history.back();" class="text-dark text-decoration-none">
-					<i class="fa fa-arrow-left"></i>
-				</a>&nbsp;论坛官方群聊
-			</h3>
+			<h3>官方群聊</h3>
 			<hr />
 			<table class="table table-hover">
 				<thead>
@@ -54,19 +62,52 @@
 						<th>链接</th>
 					</tr>
 				</thead>
-				<tbody id="group-table-body"></tbody>
+				<tbody id="official-group-table-body"></tbody>
 			</table>
 		</div>
-		<div class="row w-100">
+
+		<div class="table-container mb-5" id="section-list">
+			<h3>板块群聊</h3>
+			<hr />
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>群名称</th>
+						<th>群号</th>
+						<th>状态</th>
+						<th>链接</th>
+					</tr>
+				</thead>
+				<tbody id="section-group-table-body"></tbody>
+			</table>
+		</div>
+
+		<div class="table-container mb-5" id="qq-channel-list">
+			<h3>QQ频道</h3>
+			<hr />
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>频道名称</th>
+						<th>频道号</th>
+						<th>状态</th>
+						<th>链接</th>
+					</tr>
+				</thead>
+				<tbody id="qq-channel-table-body"></tbody>
+			</table>
+		</div>
+
+		<div class="row w-100 footer-buttons">
 			<div class="col text-center">
-				<a class="text-decoration-none" href="javascript:history.back();">
+				<a class="text-decoration-none" href="javascript:void(0);" onclick="history.back();">
 					<button type="button" class="btn btn-outline-primary">
 						<i class="fa fa-arrow-left" aria-hidden="true"></i> 返回上一页
 					</button>
 				</a>
 			</div>
 			<div class="col text-center">
-				<a class="text-decoration-none" href="/">
+				<a class="text-decoration-none" href="https://klpbbs.com">
 					<button type="button" class="btn btn-outline-primary">
 						<i class="fa fa-home" aria-hidden="true"></i> 返回首页
 					</button>
@@ -76,7 +117,7 @@
 	</div>
 
 	<script>
-		const groups = [
+		const officialGroups = [
 			{ name: '①群', number: '598120166', status: '火热', link: 'https://qm.qq.com/q/E1nPLb4Shq' },
 			{ name: '②群', number: '151083999', status: '火热', link: 'https://qm.qq.com/q/9ZNXs86nt0' },
 			{ name: '③群', number: '131200488', status: '火热', link: 'https://qm.qq.com/q/P77D2RXwoU' },
@@ -85,7 +126,18 @@
 			{ name: '⑦群', number: '538497540', status: '火热', link: 'https://qm.qq.com/q/HFFjmSVDmS' },
 			{ name: '⑧群', number: '838923614', status: '空闲', link: 'https://qm.qq.com/q/aMBvcEF9ya' },
 			{ name: '⑨群', number: '916037204', status: '爆满', link: 'https://qm.qq.com/q/WGor6BRDA4' },
-			{ name: '⑩群', number: '210044288', status: '爆满', link: 'https://qm.qq.com/q/7JLEj4jw4M' },
+			{ name: '⑩群', number: '210044288', status: '爆满', link: 'https://qm.qq.com/q/7JLEj4jw4M' }
+		];
+
+		const sectionGroups = [
+			{ name: '内群', number: '隐藏', status: '需申请', link: 'https://klpbbs.com/thread-78494-1-1.html' },
+			{ name: '皮肤创作交流群', number: '隐藏', status: '需申请', link: 'https://klpbbs.com/thread-104739-1-1.html' },
+			{ name: '创意港湾版块交流群', number: '隐藏', status: '需申请', link: 'https://klpbbs.com/thread-129402-1-1.html' },
+			{ name: '游戏资讯版块催审群', number: '隐藏', status: '需申请', link: 'https://klpbbs.com/thread-109342-1-1.html' },
+			{ name: 'Java版资源创作交流群', number: '332359582', status: '空闲', link: 'https://qm.qq.com/q/UNOvOTOlwc' }
+		];
+
+		const qqChannels = [
 			{ name: 'QQ频道', number: 'ia4j9i7295', status: '空闲', link: 'https://pd.qq.com/s/h8gkvbpzy' }
 		];
 
@@ -97,31 +149,35 @@
 					return 'danger';
 				case '空闲':
 					return 'success';
+				case '需申请':
+					return 'info';
 				default:
 					return 'secondary';
 			}
 		}
 
-		function populateGroupTable() {
-			const tableBody = document.getElementById('group-table-body');
+		function populateTable(groups, tableBodyId) {
+			const tableBody = document.getElementById(tableBodyId);
 
 			groups.forEach(group => {
 				const row = document.createElement('tr');
 				row.innerHTML = `
-					<td>${group.name}</td>
-					<td>${group.number}</td>
-					<td><span class="badge badge-${getStatusColor(group.status)}">${group.status}</span></td>
-					<td>
-						<a href="${group.link}" target="_blank" class="btn btn-outline-secondary btn-sm">
-							<i class="fa fa-qq"></i> 点击加入
-						</a>
-					</td>
-				`;
+                    <td>${group.name}</td>
+                    <td>${group.number}</td>
+                    <td><span class="badge badge-${getStatusColor(group.status)}">${group.status}</span></td>
+                    <td>
+                        <a href="${group.link}" target="_blank" class="btn btn-outline-secondary btn-sm"><b>点击加入</b></a>
+                    </td>
+                `;
 				tableBody.appendChild(row);
 			});
 		}
 
-		document.addEventListener('DOMContentLoaded', populateGroupTable);
+		document.addEventListener('DOMContentLoaded', function () {
+			populateTable(officialGroups, 'official-group-table-body');
+			populateTable(sectionGroups, 'section-group-table-body');
+			populateTable(qqChannels, 'qq-channel-table-body');
+		});
 	</script>
 </body>
 
