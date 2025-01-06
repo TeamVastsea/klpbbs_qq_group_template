@@ -131,8 +131,8 @@
 			{ name: '⑥群', number: '494820425', status: '火热', link: 'https://qm.qq.com/q/n54rT21T3M' },
 			{ name: '⑦群', number: '538497540', status: '火热', link: 'https://qm.qq.com/q/HFFjmSVDmS' },
 			{ name: '⑧群', number: '838923614', status: '空闲', link: 'https://qm.qq.com/q/aMBvcEF9ya' },
-			{ name: '⑨群', number: '916037204', status: '爆满', link: 'https://qm.qq.com/q/WGor6BRDA4' },
-			{ name: '⑩群', number: '210044288', status: '爆满', link: 'https://qm.qq.com/q/7JLEj4jw4M' },
+			{ name: '⑨群', number: '916037204', status: '火热', link: 'https://qm.qq.com/q/WGor6BRDA4' },
+			{ name: '⑩群', number: '210044288', status: '火热', link: 'https://qm.qq.com/q/7JLEj4jw4M' },
 			{ name: '⑪群', number: '904281052', status: '空闲', link: 'https://qm.qq.com/q/PNXSsnGHE4' }
 		];
 
@@ -150,10 +150,10 @@
 
 		function getStatusColor(status) {
 			switch (status) {
-				case '火热':
-					return 'warning';
 				case '爆满':
 					return 'danger';
+				case '火热':
+					return 'warning';
 				case '空闲':
 					return 'success';
 				case '需申请':
