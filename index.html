@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>论坛群聊信息</title>
-    <link rel="stylesheet" href="https://cdn.bytedance.com/bootstrap/4.6.1/css/bootstrap.min.css">
-    <script src="https://cdn.bytedance.com/bootstrap/4.6.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/bootstrap.min.css">
+    <script src="./assets/bootstrap.min.js"></script>
 	<style>
 		body,
 		html {
@@ -85,7 +85,7 @@
 			</div>
 
 			<div class="table-container mb-5" id="section-list">
-				<h3>板块群聊</h3>
+				<h3>版块群聊</h3>
 				<hr />
 				<table class="table table-hover">
 					<thead>
@@ -124,7 +124,7 @@
 
 	<script>
 		const officialGroups = [
-			{ name: '①群', number: '598120166', status: '爆满', link: 'https://qm.qq.com/q/E1nPLb4Shq' },
+			{ name: '①群', number: '598120166', status: '满员', link: 'https://qm.qq.com/q/E1nPLb4Shq' },
 			{ name: '②群', number: '151083999', status: '火热', link: 'https://qm.qq.com/q/9ZNXs86nt0' },
 			{ name: '③群', number: '131200488', status: '火热', link: 'https://qm.qq.com/q/P77D2RXwoU' },
 			{ name: '⑤群', number: '964085979', status: '爆满', link: 'https://qm.qq.com/q/b3AMQ1kolq' },
@@ -133,11 +133,11 @@
 			{ name: '⑧群', number: '838923614', status: '空闲', link: 'https://qm.qq.com/q/aMBvcEF9ya' },
 			{ name: '⑨群', number: '916037204', status: '火热', link: 'https://qm.qq.com/q/WGor6BRDA4' },
 			{ name: '⑩群', number: '210044288', status: '火热', link: 'https://qm.qq.com/q/7JLEj4jw4M' },
-			{ name: '⑪群', number: '904281052', status: '空闲', link: 'https://qm.qq.com/q/PNXSsnGHE4' }
+			{ name: '⑪群', number: '904281052', status: '空闲', link: 'https://qm.qq.com/q/PNXSsnGHE4' },
+			{ name: '内群', number: '隐藏', status: '需申请', link: 'https://klpbbs.com/thread-78494-1-1.html' }
 		];
 
 		const sectionGroups = [
-			{ name: '内群', number: '隐藏', status: '需申请', link: 'https://klpbbs.com/thread-78494-1-1.html' },
 			{ name: '皮肤创作交流群', number: '隐藏', status: '需申请', link: 'https://klpbbs.com/thread-104739-1-1.html' },
 			{ name: '创意港湾版块交流群', number: '隐藏', status: '需申请', link: 'https://klpbbs.com/thread-129402-1-1.html' },
 			{ name: '游戏资讯版块催审群', number: '隐藏', status: '需申请', link: 'https://klpbbs.com/thread-109342-1-1.html' },
@@ -145,11 +145,13 @@
 		];
 
 		const qqChannels = [
-			{ name: 'QQ频道', number: 'ia4j9i7295', status: '空闲', link: 'https://pd.qq.com/s/h8gkvbpzy' }
+			{ name: 'QQ频道', number: 'ia4j9i7295', status: '火热', link: 'https://pd.qq.com/s/h8gkvbpzy' }
 		];
 
 		function getStatusColor(status) {
 			switch (status) {
+				case '满员':
+					return 'secondary';
 				case '爆满':
 					return 'danger';
 				case '火热':
