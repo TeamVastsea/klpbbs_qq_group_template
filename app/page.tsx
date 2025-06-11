@@ -11,220 +11,264 @@ const mockData = {
   groups: [
     {
       id: "1",
-      name: "苦力怕论坛管理组",
+      name: "KLPBBS我的世界交流①群",
       avatar: "/placeholder.svg?height=50&width=50",
-      lastMessage: "悬赏/联机/服务器 - M397749...",
-      lastTime: "昨天23:41",
+      lastMessage: "M397749: 悬赏/联机/服务器",
+      lastTime: "昨天 23:41",
       isActive: true,
     },
     {
       id: "2",
-      name: "Minecraft建筑交流群",
+      name: "KLPBBS我的世界交流②群",
       avatar: "/placeholder.svg?height=50&width=50",
-      lastMessage: "今天分享一个城堡建筑教程",
-      lastTime: "12:30",
+      lastMessage: "Steve233: 有没有整合包推荐",
+      lastTime: "09:12",
+      isActive: true,
     },
     {
       id: "3",
-      name: "AT 苦力怕论坛1群",
+      name: "KLPBBS我的世界交流③群",
       avatar: "/placeholder.svg?height=50&width=50",
-      lastMessage: "老丁电子尼古丁传输批发...",
-      lastTime: "00:44",
-    },
-    {
-      id: "4",
-      name: "红石科技研究院",
-      avatar: "/placeholder.svg?height=50&width=50",
-      lastMessage: "新的红石电路设计完成了！",
-      lastTime: "11:20",
+      lastMessage: "Alex001: 服务器开了没",
+      lastTime: "05:32",
+      isActive: true,
     },
     {
       id: "5",
-      name: "Y-羊驼群",
+      name: "KLPBBS我的世界交流⑤群",
       avatar: "/placeholder.svg?height=50&width=50",
-      lastMessage: "孙笑川258: 还是麦小鼠当...",
-      lastTime: "00:44",
+      lastMessage: "EnderEye: 新版更新了？",
+      lastTime: "昨天 22:18",
+      isActive: true,
     },
     {
       id: "6",
-      name: "模组开发者联盟",
+      name: "KLPBBS我的世界交流⑥群",
       avatar: "/placeholder.svg?height=50&width=50",
-      lastMessage: "1.20.1版本适配进度如何？",
-      lastTime: "09:15",
+      lastMessage: "RedstoneXD: 发个电路图",
+      lastTime: "06:55",
+      isActive: true,
     },
     {
       id: "7",
-      name: "M-Mine群(mineb...)",
+      name: "KLPBBS我的世界交流⑦群",
       avatar: "/placeholder.svg?height=50&width=50",
-      lastMessage: "奶昔邀请明月庄主加入了...",
-      lastTime: "00:39",
+      lastMessage: "CreeperGirl: 怎么合成信标",
+      lastTime: "昨天 19:07",
+      isActive: true,
     },
     {
       id: "8",
-      name: "服务器运维交流",
+      name: "KLPBBS我的世界交流⑧群",
       avatar: "/placeholder.svg?height=50&width=50",
-      lastMessage: "服务器今天又崩了三次...",
-      lastTime: "08:45",
+      lastMessage: "BuilderMax: 这图怎么传啊",
+      lastTime: "08:01",
+      isActive: false,
     },
     {
       id: "9",
-      name: "中国最大的躺平论坛",
+      name: "KLPBBS我的世界交流⑨群",
       avatar: "/placeholder.svg?height=50&width=50",
-      lastMessage: "大湿: 炉石管道",
-      lastTime: "00:19",
+      lastMessage: "Pigman: 村庄坐标有吗",
+      lastTime: "昨天 21:20",
+      isActive: true,
     },
     {
       id: "10",
-      name: "皮肤制作工作室",
+      name: "KLPBBS我的世界交流⑩群",
       avatar: "/placeholder.svg?height=50&width=50",
-      lastMessage: "新皮肤预览图已上传",
-      lastTime: "07:30",
+      lastMessage: "GHASTX: 要联机的私聊",
+      lastTime: "10:09",
+      isActive: true,
     },
     {
       id: "11",
-      name: "网络建设与运维",
+      name: "KLPBBS我的世界交流⑪群",
       avatar: "/placeholder.svg?height=50&width=50",
-      lastMessage: "狼狼的插入你的网口: ...",
-      lastTime: "00:15",
+      lastMessage: "Slime123: 有大佬带吗",
+      lastTime: "02:47",
+      isActive: false,
     },
     {
       id: "12",
-      name: "游戏测试小组",
+      name: "KLPBBS内群",
       avatar: "/placeholder.svg?height=50&width=50",
-      lastMessage: "Beta版本bug汇总报告",
-      lastTime: "06:20",
+      lastMessage: "Admin: 请注意言论规范",
+      lastTime: "昨天 16:30",
+      isActive: true,
     },
     {
       id: "13",
-      name: "K-内群(klpbbs)",
+      name: "皮肤创作交流群",
       avatar: "/placeholder.svg?height=50&width=50",
-      lastMessage: "菜猫是谁: [动画表情]",
-      lastTime: "00:14",
+      lastMessage: "SkinPro: 新皮肤已上传",
+      lastTime: "07:20",
+      isActive: true,
     },
     {
       id: "14",
-      name: "创意建筑大赛",
+      name: "创意港湾版块交流群",
       avatar: "/placeholder.svg?height=50&width=50",
-      lastMessage: "本月主题：未来城市",
-      lastTime: "昨天",
+      lastMessage: "IdeaMan: 有个新模组想法",
+      lastTime: "昨天 20:03",
+      isActive: true,
     },
     {
       id: "15",
-      name: "新手指导群",
+      name: "游戏资讯版块催审群",
       avatar: "/placeholder.svg?height=50&width=50",
-      lastMessage: "萌新求助：怎么做自动农场？",
-      lastTime: "05:45",
+      lastMessage: "Moderator: 新帖审核中",
+      lastTime: "01:17",
+      isActive: true,
     },
+    {
+      id: "16",
+      name: "Java版资源创作交流群",
+      avatar: "/placeholder.svg?height=50&width=50",
+      lastMessage: "CoderBoy: 发布了新模组",
+      lastTime: "04:40",
+      isActive: true,
+    },
+    {
+      id: "17",
+      name: "KLPBBS QQ频道",
+      avatar: "/placeholder.svg?height=50&width=50",
+      lastMessage: "ChannelBot: 今日讨论话题上线",
+      lastTime: "昨天 18:12",
+      isActive: true,
+    }
   ],
   groupDetails: {
     "1": {
       id: "1",
-      name: "苦力怕论坛管理组",
+      name: "KLPBBS我的世界交流①群",
       avatar: "/placeholder.svg?height=120&width=120",
-      groupNumber: "1051855098",
-      introduction: "苦力怕论坛官方管理群，负责论坛日常管理和用户服务。欢迎大家积极参与讨论，共同维护良好的社区环境。",
+      groupNumber: "598120166",
+      introduction: "KLPBBS我的世界交流①群。欢迎大家积极参与讨论，共同维护良好的社区环境。",
+      chatStatus: "满员"
     },
     "2": {
       id: "2",
-      name: "Minecraft建筑交流群",
+      name: "KLPBBS我的世界交流②群",
       avatar: "/placeholder.svg?height=120&width=120",
-      groupNumber: "2087654321",
-      introduction:
-        "专注于Minecraft建筑技巧分享和交流的群组。无论你是建筑新手还是大神，都欢迎在这里分享你的作品和心得。",
+      groupNumber: "151083999",
+      introduction: "KLPBBS我的世界交流②群。",
+      chatStatus: "火热"
     },
     "3": {
       id: "3",
-      name: "AT 苦力怕论坛1群",
+      name: "KLPBBS我的世界交流③群",
       avatar: "/placeholder.svg?height=120&width=120",
-      groupNumber: "3098765432",
-      introduction: "苦力怕论坛第一交流群，汇聚了众多Minecraft爱好者。在这里可以讨论游戏技巧、分享有趣的发现。",
-    },
-    "4": {
-      id: "4",
-      name: "红石科技研究院",
-      avatar: "/placeholder.svg?height=120&width=120",
-      groupNumber: "4012345678",
-      introduction: "专业的红石电路研究和分享群组。从简单的红石门到复杂的计算机，这里有最前沿的红石科技。",
+      groupNumber: "131200488",
+      introduction: "KLPBBS我的世界交流③群。",
+      chatStatus: "火热"
     },
     "5": {
       id: "5",
-      name: "Y-羊驼群",
+      name: "KLPBBS我的世界交流⑤群",
       avatar: "/placeholder.svg?height=120&width=120",
-      groupNumber: "5023456789",
-      introduction: "轻松愉快的聊天群，主要讨论游戏和生活趣事。群友关系融洽，氛围轻松活跃。",
+      groupNumber: "964085979",
+      introduction: "KLPBBS我的世界交流⑤群。",
+      chatStatus: "爆满"
     },
     "6": {
       id: "6",
-      name: "模组开发者联盟",
+      name: "KLPBBS我的世界交流⑥群",
       avatar: "/placeholder.svg?height=120&width=120",
-      groupNumber: "6034567890",
-      introduction: "Minecraft模组开发者的专业交流平台。分享开发经验、讨论技术难题、发布最新模组。",
+      groupNumber: "494820425",
+      introduction: "KLPBBS我的世界交流⑥群。",
+      chatStatus: "火热"
     },
     "7": {
       id: "7",
-      name: "M-Mine群(mineb...)",
+      name: "KLPBBS我的世界交流⑦群",
       avatar: "/placeholder.svg?height=120&width=120",
-      groupNumber: "7045678901",
-      introduction: "Mine系列服务器官方群，提供服务器最新资讯、活动通知和玩家交流平台。",
+      groupNumber: "538497540",
+      introduction: "KLPBBS我的世界交流⑦群。",
+      chatStatus: "火热"
     },
     "8": {
       id: "8",
-      name: "服务器运维交流",
+      name: "KLPBBS我的世界交流⑧群",
       avatar: "/placeholder.svg?height=120&width=120",
-      groupNumber: "8056789012",
-      introduction: "Minecraft服务器运维人员交流群。分享运维经验、讨论服务器优化、解决技术问题。",
+      groupNumber: "838923614",
+      introduction: "KLPBBS我的世界交流⑧群。",
+      chatStatus: "空闲"
     },
     "9": {
       id: "9",
-      name: "中国最大的躺平论坛",
+      name: "KLPBBS我的世界交流⑨群",
       avatar: "/placeholder.svg?height=120&width=120",
-      groupNumber: "9067890123",
-      introduction: "放松心情的休闲交流群，讨论生活、游戏、娱乐等轻松话题。让我们一起躺平享受生活。",
+      groupNumber: "916037204",
+      introduction: "KLPBBS我的世界交流⑨群。",
+      chatStatus: "火热"
     },
     "10": {
       id: "10",
-      name: "皮肤制作工作室",
+      name: "KLPBBS我的世界交流⑩群",
       avatar: "/placeholder.svg?height=120&width=120",
-      groupNumber: "1078901234",
-      introduction: "专业的Minecraft皮肤制作和分享群组。提供皮肤制作教程、工具推荐和作品展示。",
+      groupNumber: "210044288",
+      introduction: "KLPBBS我的世界交流⑩群。",
+      chatStatus: "火热"
     },
     "11": {
       id: "11",
-      name: "网络建设与运维",
+      name: "KLPBBS我的世界交流⑪群",
       avatar: "/placeholder.svg?height=120&width=120",
-      groupNumber: "1189012345",
-      introduction: "网络技术和服务器运维专业交流群。讨论网络架构、服务器配置、安全防护等技术话题。",
+      groupNumber: "904281052",
+      introduction: "KLPBBS我的世界交流⑪群。",
+      chatStatus: "空闲"
     },
     "12": {
       id: "12",
-      name: "游戏测试小组",
+      name: "KLPBBS内群",
       avatar: "/placeholder.svg?height=120&width=120",
-      groupNumber: "1290123456",
-      introduction: "游戏测试和bug反馈专业群组。参与游戏测试、反馈问题、改进游戏体验。",
+      groupNumber: "隐藏",
+      introduction: "KLPBBS官方内部群，需申请加入。",
+      chatStatus: "需申请"
     },
     "13": {
       id: "13",
-      name: "K-内群(klpbbs)",
+      name: "皮肤创作交流群",
       avatar: "/placeholder.svg?height=120&width=120",
-      groupNumber: "1301234567",
-      introduction: "苦力怕论坛内部交流群，主要用于论坛管理和核心用户交流。",
+      groupNumber: "隐藏",
+      introduction: "用于皮肤创作分享与交流，需申请加入。",
+      chatStatus: "需申请"
     },
     "14": {
       id: "14",
-      name: "创意建筑大赛",
+      name: "创意港湾版块交流群",
       avatar: "/placeholder.svg?height=120&width=120",
-      groupNumber: "1412345678",
-      introduction: "定期举办建筑比赛的群组。展示创意作品、参与比赛、学习建筑技巧。",
+      groupNumber: "隐藏",
+      introduction: "创意港湾版块相关讨论群，需申请加入。",
+      chatStatus: "需申请"
     },
     "15": {
       id: "15",
-      name: "新手指导群",
+      name: "游戏资讯版块催审群",
       avatar: "/placeholder.svg?height=120&width=120",
-      groupNumber: "1523456789",
-      introduction: "专门为Minecraft新手提供指导和帮助的群组。老玩家热心解答，新手快速成长。",
+      groupNumber: "隐藏",
+      introduction: "游戏资讯板块催审群，用于版主沟通。",
+      chatStatus: "需申请"
     },
-  },
-}
+    "16": {
+      id: "16",
+      name: "Java版资源创作交流群",
+      avatar: "/placeholder.svg?height=120&width=120",
+      groupNumber: "332359582",
+      introduction: "Java版资源创作与交流。",
+      chatStatus: "空闲"
+    },
+    "17": {
+      id: "17",
+      name: "KLPBBS QQ频道",
+      avatar: "/placeholder.svg?height=120&width=120",
+      groupNumber: "ia4j9i7295",
+      introduction: "KLPBBS QQ频道。欢迎加入社区讨论。",
+      chatStatus: "火热"
+    }
+  }
+};
 
 export default function ChatInterface() {
   const [selectedGroup, setSelectedGroup] = useState<string>("1")
@@ -312,17 +356,11 @@ export default function ChatInterface() {
                   </AvatarFallback>
                 </Avatar>
                 <div className="flex-1 min-w-0">
-                  <div className="flex justify-between items-center">
-                    <h3 className={`font-medium truncate ${isDarkMode ? "text-gray-100" : "text-gray-800"}`}>
-                      {group.name}
-                    </h3>
-                    <span className={`text-xs ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>
-                      {group.lastTime}
-                    </span>
+                  <div className="flex items-center">
+                    <h3 className={`font-medium truncate flex-1 ${isDarkMode ? "text-gray-100" : "text-gray-800"}`}>{group.name}</h3>
+                    <span className={`text-xs ml-2 text-right min-w-[56px] flex-shrink-0 ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>{group.lastTime}</span>
                   </div>
-                  <p className={`text-sm truncate mt-1 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                    {group.lastMessage}
-                  </p>
+                  <p className={`text-sm truncate mt-1 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>{group.lastMessage}</p>
                 </div>
               </div>
             ))}
